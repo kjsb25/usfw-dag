@@ -35,4 +35,22 @@ public class SolutionService {
         return maximumDepth;
 
     }
+
+    public Integer dfsNoBacktrack(DAG dag, Integer startingVertex) {
+        int output = dfsNoBacktrackRecurse(dag, startingVertex, 0);
+
+        return output;
+
+    }
+
+    private Integer dfsNoBacktrackRecurse(DAG dag, Integer node, int currDepth) {
+        Vertex vertex = dag.getVertices().get(node - 1);
+        int maximumDepth=currDepth;
+        for (Integer destination : vertex.getDestinations()) {
+                int currResult = dfsNoBacktrackRecurse(dag, destination, currDepth + 1);
+                maximumDepth = Math.max(maximumDepth, currResult);
+        }
+        return maximumDepth;
+
+    }
 }

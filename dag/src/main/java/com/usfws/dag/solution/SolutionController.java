@@ -30,12 +30,14 @@ public class SolutionController {
 
         switch (strategy) {
             case DFS:
-                result = this.solutionService.depthFirstSearch(dag, startingVertex);
+                result = solutionService.depthFirstSearch(dag, startingVertex);
+            case DFSNoBack:
+                result = solutionService.dfsNoBacktrack(dag, startingVertex);
+
         }
 
-        String output = dag.toString();
+        String output =  "Longest path from node " + startingVertex +": "+ result + "\n\n\n\n"+dag.toString();
 
-        output += "\n\n\nLongest path from root node: "+ result;
 
         return output;
     }
