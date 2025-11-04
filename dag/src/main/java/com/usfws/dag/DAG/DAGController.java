@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value="/dag")
+@RequestMapping(value = "/dag")
 public class DAGController {
 
     @GetMapping(value = "/random/{numVertices}", produces = MediaType.TEXT_PLAIN_VALUE)
-    public String getRandomDag(@PathVariable Integer numVertices){
+    public String getRandomDag(@PathVariable Integer numVertices) {
         return DagService.generateRandomDag(numVertices).toString();
     }
 

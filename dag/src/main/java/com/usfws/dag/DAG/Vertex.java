@@ -3,9 +3,10 @@ package com.usfws.dag.DAG;
 import java.util.ArrayList;
 import java.util.List;
 
-class Vertex {
+public class Vertex {
+
     int id;
-    int numParents=0;
+    int numParents = 0;
     List<Integer> destinations;
 
     public Vertex(int id) {
@@ -25,12 +26,11 @@ class Vertex {
         return destinations;
     }
 
-    
     public void addDestination(int id) {
         this.destinations.add(id);
     }
 
-    public void incrementParents(){
+    public void incrementParents() {
         this.numParents++;
     }
 
