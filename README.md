@@ -24,3 +24,8 @@
     - Since DFS insists on visiting each node along each edge, it scales upward with both
     - O(vertexes+edges)
 4.  Are there any unusual cases that aren't handled?
+
+### Some output examples
+<img width="446" height="759" alt="image" src="https://github.com/user-attachments/assets/b6251a5e-3ec0-4ee4-8f7e-c81d89dd6e45" />
+<img width="430" height="852" alt="2" src="https://github.com/user-attachments/assets/e9cab024-3658-4262-b0e2-54bfabdd7c68" />
+<img width="431" height="919" alt="1" src="https://github.com/user-attachments/assets/63764fb9-ac17-465c-84ec-44fd0c681636" />
